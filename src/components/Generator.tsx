@@ -219,6 +219,28 @@ export default () => {
           </div>
         )}
       >
+        <div class="gen-text-wrapper" class:op-50={systemRoleEditing()}>
+          <textarea
+            ref={inputRef!}
+            disabled={systemRoleEditing()}
+            onKeyDown={handleKeydown}
+            placeholder="Enter something..."
+            autocomplete="off"
+            autofocus
+            onInput={() => {
+              inputRef.style.height = 'auto'
+              inputRef.style.height = `${inputRef.scrollHeight}px`
+            }}
+            rows="1"
+            class="gen-textarea"
+          />
+          <button onClick={handleButtonClick} disabled={systemRoleEditing()} gen-slate-btn>
+            Send
+          </button>
+          <button title="Clear" onClick={clear} disabled={systemRoleEditing()} gen-slate-btn>
+            <IconClear />
+          </button>
+        </div>
       </Show>
       <div class="fixed bottom-5 left-5 rounded-md hover:bg-slate/10 w-fit h-fit transition-colors active:scale-90" class:stick-btn-on={isStick()}>
         <div>
