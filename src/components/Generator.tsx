@@ -239,6 +239,9 @@ export default () => {
         )}
       >
         <div class="gen-text-wrapper" class:op-50={false}>
+          <button title="Clear" onClick={clear} disabled={false} gen-slate-btn>
+            Clear
+          </button>
           <textarea
             ref={inputRef!}
             disabled={false}
@@ -255,9 +258,6 @@ export default () => {
           />
           <button onClick={handleButtonClick} disabled={false} gen-slate-btn>
             Send
-          </button>
-          <button title="Clear" onClick={clear} disabled={false} gen-slate-btn>
-            <IconClear />
           </button>
         </div>
       </Show>
