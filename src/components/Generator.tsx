@@ -243,7 +243,7 @@ export default () => {
             ref={inputRef!}
             disabled={false}
             onKeyDown={handleKeydown}
-            placeholder="Enter something..."
+            placeholder="Message ChatGPT..."
             autocomplete="off"
             autofocus
             onInput={() => {
